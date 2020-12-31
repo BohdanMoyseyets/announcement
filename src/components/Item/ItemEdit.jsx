@@ -30,7 +30,7 @@ const ItemEdit = (props) => {
                 <span>Description</span>
                 <textarea onChange={onChangeEditDesc} className={style.description} ref={editItemDesc} defaultValue={props.data.text}></textarea>
             </div>
-            <button onClick={onClickEditItem} disabled={props.editTitleText === "" || props.editDescText === ""}><NavLink to="">Ok</NavLink></button>
+            <button onClick={onClickEditItem}><NavLink to="">Ok</NavLink></button>
             <button><NavLink to=""> Cancel</NavLink></button>
         </div>
     );
