@@ -64,7 +64,7 @@ const announcementReducer = (state = initial_state, action) => {
             };
         }
         case DELETE_ITEM: {
-            [...state.announcementData.splice(action.itemID, 1)]();
+            let a = [...state.announcementData.splice(action.itemID, 1)];
             return {
                 ...state,
                 announcementData: [...state.announcementData]
