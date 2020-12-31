@@ -1,0 +1,22 @@
+.item{
+    width: 31%;
+    min-height: 150px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+}
+.description{
+
+}
+
+.date{
+
+}
+.edit{
+    
+}
+
+.delete{
+
+}

@@ -1,0 +1,32 @@
+.item{
+    position: fixed;
+    left: 45%;
+    top: 300px;
+    min-width: 300px;
+    min-height: 150px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: white;
+}
+.item > div{
+    text-align: end;
+    padding: 5px;
+}
+.title{
+    width: 200px;
+}
+
+.description{
+    width: 200px;
+}
+.item button{
+    margin: 5px;
+}
+.item a{
+    display: block;
+    text-decoration: none;
+    text-transform: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
