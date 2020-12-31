@@ -12,22 +12,22 @@ const SHOW_SIMILAR='SHOW_SIMILAR';
 let initial_state = {
     announcementData: [
         {
-            id: 1, text: "A111aaa11aa1a1a1a1 fsh ks sfh skhf skfhks ", title: "First", date: "Dec 27, 2020 11:43 PM", showDetails: false, showSimilar: false
+            id: 1, text: "First announcement ", title: "First", date: "Dec 27, 2020 11:43 PM", showDetails: false, showSimilar: false
         },
         {
-            id: 2, text: "B2b2b2bb2b2b2b2b22 dgsdgs", title: "Second", date: "Dec 27, 2020 11:43 PM", showDetails: false, showSimilar: false
+            id: 2, text: "Second announcement ", title: "Second", date: "Dec 27, 2020 11:43 PM", showDetails: false, showSimilar: false
         },
         {
-            id: 3, text: "C3 wfsfsfw", title: "Third", date: "Dec 27, 2020 11:43 PM", showDetails: false, showSimilar: false
+            id: 3, text: "Third announcement ", title: "Third", date: "Dec 27, 2020 11:43 PM", showDetails: false, showSimilar: false
         },
         {
-            id: 4, text: "D4 f sdgsdg s s", title: "Fourth", date: "Dec 27, 2020 11:43 PM", showDetails: false, showSimilar: false
+            id: 4, text: "Fourth announcement ", title: "Fourth", date: "Dec 27, 2020 11:43 PM", showDetails: false, showSimilar: false
         }
     ],
     editTitleText: "",
     editDescText: "",
-    newTitleText: "aaaa",
-    newDescText: "bla",
+    newTitleText: "",
+    newDescText: "",
     searchItemTitle:""
 
 }
@@ -41,7 +41,8 @@ const announcementReducer = (state = initial_state, action) => {
                 text: state.newDescText,
                 title: state.newTitleText,
                 date: action.addDate,
-                showDetails: false
+                showDetails: false,
+                showSimilar: false
             };
             return {
                 ...state,
@@ -63,7 +64,7 @@ const announcementReducer = (state = initial_state, action) => {
             };
         }
         case DELETE_ITEM: {
-            let a = [...state.announcementData.splice(action.itemID, 1)];
+            [...state.announcementData.splice(action.itemID, 1)]();
             return {
                 ...state,
                 announcementData: [...state.announcementData]
@@ -79,8 +80,6 @@ const announcementReducer = (state = initial_state, action) => {
         case EDIT_ITEM: {
             state.announcementData[action.itemIndex].title = action.itemTitle;
             state.announcementData[action.itemIndex].text = action.itemDesc;
-            // state.editDescText = "";
-            // state.editTitleText = "";
             return {
                 ...state,
                 announcementData: [...state.announcementData]

@@ -1,17 +1,11 @@
 .item{
-
+    padding: 3px;
 }
 .description{
-
+    font-size: 16px;
 }
 
 .date{
-
-}
-.edit{
-    
-}
-
-.delete{
-
+    font-size: 12px;
+    text-align: end;
 }

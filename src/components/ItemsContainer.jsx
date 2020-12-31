@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from "react-redux"
 import { addItemChangeDescCreator, addItemChangeTitleCreator, addItemCreator, deleteItemCreator, editItemCreator, editItemDescCreator, editItemTitleCreator, searchItemCreator, showDetailsItemCreator, showSimilarItemCreator } from '../redux/reducers/announcement-reducer';
 import Items from "./Items"

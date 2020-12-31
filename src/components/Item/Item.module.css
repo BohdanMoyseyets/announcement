@@ -6,17 +6,7 @@
     padding: 5px;
     border-radius: 15px;
 }
-.description{
-
-}
-
-.date{
-
-}
-.edit{
-    
-}
-
-.delete{
-
+.similar_item_content{
+    display: flex;
+    justify-content: space-around;
 }
